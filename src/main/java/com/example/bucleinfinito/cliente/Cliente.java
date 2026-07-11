@@ -92,11 +92,4 @@ public class Cliente extends Person {
     private int calcularPuntos() {
         return reservas.size() * 10;
     }
-
-    // BAD PRACTICE [S125]: commented-out code
-    // public int getNivelFidelidad() {
-    //     if (reservas.size() >= 10) return 3;
-    //     if (reservas.size() >= 5) return 2;
-    //     return 1;
-    // }
 }
