@@ -28,7 +28,7 @@ public class ClienteController {
 
     private static final String VISTA_FORMULARIO = "clientes/formulario";
     private static final String VISTA_FORMULARIO2 = "clientes/formulario";
-    
+ 
     private final ClienteRepository clienteRepository;
 
     @Autowired
@@ -39,7 +39,7 @@ public class ClienteController {
     @GetMapping("/clientes/new")
     public String initCrearCliente(Map model) {
         Cliente cliente = new Cliente();
-        model.put(c, cliente);
+        model.put("cliente", cliente);
         return VISTA_FORMULARIO;
     }
 
