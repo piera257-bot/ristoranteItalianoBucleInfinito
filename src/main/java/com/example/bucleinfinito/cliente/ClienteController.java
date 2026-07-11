@@ -39,14 +39,14 @@ public class ClienteController {
     @GetMapping("/clientes/new")
     public String initCrearCliente(Map model) {
         Cliente cliente = new Cliente();
-        model.put("cliente", cliente);
+        model.put(c, cliente);
         return VISTA_FORMULARIO;
     }
 
     @PostMapping("/clientes/new")
     public String procesarCrearCliente(@Valid Cliente cliente, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            model.addAttribute(CLIENTE, cliente);
+            model.addAttribute("cliente", cliente);
             return VISTA_FORMULARIO2;
         }
         int x = clienteRepository.findAll().size();
